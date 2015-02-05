@@ -1,0 +1,17 @@
+<h1>Edit and View Existing Students</h1>
+
+{{#each student in model itemController="student"}}
+<h3>ID: {{student.id}}</h3>
+<h3>My name is {{student.fullname}}{{#if student.onField}} and I am on the field {{/if}}</h3>
+<h2>My score is: {{student.score}}</h2>
+<button {{action 'toggleOnField' student}}>Toggle Field status</button>
+<button {{action 'deleteRecord' student}}>Delete this student</button>
+<button {{action 'increaseScore' student}}>Increase Score</button>
+{{/each}}
+
+<h1>List of Users below</h1>
+
+
+
+{{outlet}}
+
